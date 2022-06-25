@@ -1,1 +1,154 @@
-## PowerShell Basics
+## PowerShell basics
+
+
+PowerShell
+Fabian Sasse, Stefan Zmatlo
+## Basics
+What is PowerShell?
+Automation Framework!
+## Versions
+* Windows PowerShell 1.0\
+Released 2006
+* Windows PowerShell 2.0\
+Added Remoting
+* Windows PowerShell 3.0\
+Automatic Module detection
+* Windows PowerShell 4.0\
+Added Desired State Configuration „DSC“
+* Windows PowerShell 5.0\
+Just enough Administration „JEA“
+Windows PowerShell 5.1 – Windows
+* PowerShell Core 6\
+First time Multiplatform
+* PowerShell 7.1 – Multiplatform
+## First Steps
+First Steps
+## Basic Concepts
+```Verb-Noun``` Cmdlets
+Case insensitive
+Basic Concepts
+Object based
+
+
+Basic Concepts
+Autotype Casting
+Basic Concepts
+.NET Based
+## Aliases
+Common Unix / dos commands built-in
+|Alias|Cmdlet|
+|---|---|
+|```ls```|Get-Childitems|
+|```curl```|Invoke-WebRequest|
+|```mkdir```|New-Item –ItemType Directory|
+Built-In Aliases
+|```%```|For-Each
+|```?```|Where-Object
+|```$_```|```$PSITEM```
+
+PowerShell Aliases
+## Variables
+DEMO TIME
+## Input / Output
+|Input||
+|---|---|
+|Parameters|
+|Pipeline|Takes data from previous cmdlets pipeline
+|Read-Host|Prompts the user for interactive input
+|Write-Output|
+|Write-Debug/Error/Warning/Information|Levels of verbosity
+## Object Based
+Each PSObject has:
+- Type
+- Properties
+- Methods
+## Pipeline
+Chains commands together
+Data from the previous command available in $PSITEM
+
+about Pipelines - PowerShell | Microsoft Docs
+## Pipeline Where Object
+Filter Objects by properties
+Common Operators:\
+```-eq``` /``` -ne```\
+```-like``` / ```-notlike```\
+```-gt``` / ```-lt```
+
+about Operators - PowerShell | Microsoft Docs
+## Pipeline Foreach Object
+Runs script block for every object in Pipeline
+## Pipeline Select Object
+Filters the properties which are output
+Alias Select
+## Types
+## Modules
+Binary Modules
+Script Modules
+https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_modules?view=powershell-7.1
+Modules
+Get-InstalledModule Lists installed Modules (not currently loaded!)
+Get-Module Lists currently loaded modules
+## Highlights
+Import / Export Objects
+Credential Objects
+Built-in Debugging
+Execution Policies
+Highlights
+Out-GridView
+Splatting
+Foreach –Parallel
+PowerShell Remoting
+Logging / Auditing
+## Features from other Shells
+History / Search
+Profile
+Aliases
+Pipelines
+Man
+## Available Modules
+Official Supported
+(All most) Everything Microsoft
+VMWare
+NetApp
+PowerShell Gallery | Home
+artifactory.imp.ac.at - POSH
+1Password
+Cisco ISE
+## Cmdlets / functions
+AKA “Commands”
+VERB – NOUN nomenclature
+E.g. Start-Process
+Get-Command -Verb Get -Noun *event*
+Get-Verb – Lists naming recommendations
+Common parameters
+- Verbose
+- Whatif
+DEMO TIME
+## Variables
+$? – Last exit code
+$Error – Contains all errors from this session
+$PSVersionTable – PowerShell Version
+$PSItem – Current item in Pipeline
+$true / $false / $null
+$PROFILE – Path to the user PowerShell profile
+about Automatic Variables - PowerShell | Microsoft Docs
+## Finding the right command
+Get-Command aka gcm
+Get-Members aka gm
+Get-help aka help
+Show-Command
+## Keyboard Shortcuts
+Autocomplete with CTRL + SPACE
+Works on Cmdlets and parameters
+## PowerShell repo
+https://bitbucket.vbc.ac.at/projects/VBCOPS/repos/scriptsandsnippets/browse
+## Notes
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser Sets executionpolicy to unrestricted for current user
+## Links
+https://poshcode.gitbook.io/powershell-practice-and-style
+https://adamtheautomator.com/
+about Profiles - PowerShell | Microsoft Docs
+## Literature
+Windows PowerShell – Tobias Weltner
+Learn Windows PowerShell in a month of lunches – Don Jones
+PowerShell Cookbook – Lee Holmes
