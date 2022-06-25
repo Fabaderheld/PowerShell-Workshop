@@ -1,1 +1,1 @@
-## PowerShell comparison to bash
+# PowerShell comparison to bash
