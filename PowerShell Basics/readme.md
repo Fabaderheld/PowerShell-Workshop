@@ -5,6 +5,7 @@ PowerShell
 Fabian Sasse, Stefan Zmatlo
 ## Basics
 What is PowerShell?
+
 Automation Framework!
 ## Versions
 * Windows PowerShell 1.0\
@@ -38,15 +39,15 @@ Basic Concepts
 Common Unix / dos commands built-in
 |Alias|Cmdlet|
 |---|---|
-|```ls```|Get-Childitems|
-|```curl```|Invoke-WebRequest|
-|```mkdir```|New-Item –ItemType Directory|
+|```ls```|```Get-Childitems```|
+|```curl```|```Invoke-WebRequest```|
+|```mkdir```|```New-Item –ItemType Directory```|
 Built-In Aliases
-|```%```|For-Each
-|```?```|Where-Object
+|```%```|```For-Each```
+|```?```|```Where-Object```
 |```$_```|```$PSITEM```
 
-PowerShell Aliases
+[about Aliases - PowerShell | Microsoft Docs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_aliases?view=powershell-7.1)
 ## Variables
 DEMO TIME
 ## Input / Output
@@ -64,9 +65,9 @@ Each PSObject has:
 - Methods
 ## Pipeline
 Chains commands together
-Data from the previous command available in $PSITEM
+Data from the previous command available in ```$PSITEM``` / ```$_```
 
-about Pipelines - PowerShell | Microsoft Docs
+[about Pipelines - PowerShell | Microsoft Docs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_pipelines?view=powershell-7.1)
 ## Pipeline Where Object
 Filter Objects by properties
 Common Operators:\
@@ -74,7 +75,8 @@ Common Operators:\
 ```-like``` / ```-notlike```\
 ```-gt``` / ```-lt```
 
-about Operators - PowerShell | Microsoft Docs
+[about Operators - PowerShell | Microsoft Docs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-7.1)
+
 ## Pipeline Foreach Object
 Runs script block for every object in Pipeline
 ## Pipeline Select Object
@@ -84,7 +86,7 @@ Alias Select
 ## Modules
 Binary Modules
 Script Modules
-https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_modules?view=powershell-7.1
+[about Operators - PowerShell | Microsoft Docs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_modules?view=powershell-7.1)
 Modules
 Get-InstalledModule Lists installed Modules (not currently loaded!)
 Get-Module Lists currently loaded modules
@@ -107,13 +109,13 @@ Pipelines
 Man
 ## Available Modules
 Official Supported
-(All most) Everything Microsoft
-VMWare
-NetApp
+- (All most) Everything Microsoft
+- VMWare
+- NetApp
 PowerShell Gallery | Home
 artifactory.imp.ac.at - POSH
-1Password
-Cisco ISE
+- 1Password
+- Cisco ISE
 ## Cmdlets / functions
 AKA “Commands”
 VERB – NOUN nomenclature
@@ -125,13 +127,16 @@ Common parameters
 - Whatif
 DEMO TIME
 ## Variables
-$? – Last exit code
-$Error – Contains all errors from this session
-$PSVersionTable – PowerShell Version
-$PSItem – Current item in Pipeline
-$true / $false / $null
-$PROFILE – Path to the user PowerShell profile
-about Automatic Variables - PowerShell | Microsoft Docs
+|Variable Name|Description|
+|---|---|
+```$?```|Last exit code
+```$Error```|Contains all errors from this session
+```$PSVersionTable```|PowerShell Version
+```$PSItem```|Current item in Pipeline
+```$true``` / ```$false``` / ```$null```|
+```$PROFILE```|Path to the user PowerShell profile
+
+[about Automatic Variables - PowerShell | Microsoft Docs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_automatic_variables?view=powershell-7.2)
 ## Finding the right command
 Get-Command aka gcm
 Get-Members aka gm
@@ -145,10 +150,12 @@ https://bitbucket.vbc.ac.at/projects/VBCOPS/repos/scriptsandsnippets/browse
 ## Notes
 Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser Sets executionpolicy to unrestricted for current user
 ## Links
-https://poshcode.gitbook.io/powershell-practice-and-style
-https://adamtheautomator.com/
+[PowerShell best pratice](https://poshcode.gitbook.io/powershell-practice-and-style)\
+[Adam the automator](https://adamtheautomator.com/)\
 about Profiles - PowerShell | Microsoft Docs
 ## Literature
-Windows PowerShell – Tobias Weltner
-Learn Windows PowerShell in a month of lunches – Don Jones
-PowerShell Cookbook – Lee Holmes
+|Title|Author|
+|---|---|
+|Windows PowerShell|Tobias Weltner
+|Learn Windows PowerShell in a month of lunches|Don Jones
+|PowerShell Cookbook|Lee Holmes
