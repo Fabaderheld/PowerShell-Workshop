@@ -1,8 +1,32 @@
-## PowerShell basics
+# PowerShell Basics
 
+- [PowerShell Basics](#powershell-basics)
+  - [Basics](#basics)
+  - [Versions](#versions)
+  - [First Steps](#first-steps)
+  - [Basic Concepts](#basic-concepts)
+  - [Aliases](#aliases)
+  - [Variables](#variables)
+  - [Input / Output](#input--output)
+  - [Object Based](#object-based)
+  - [Pipeline](#pipeline)
+  - [Pipeline Where Object](#pipeline-where-object)
+  - [Pipeline Foreach Object](#pipeline-foreach-object)
+  - [Pipeline Select Object](#pipeline-select-object)
+  - [Types](#types)
+  - [Modules](#modules)
+  - [Highlights](#highlights)
+  - [Features from other Shells](#features-from-other-shells)
+  - [Available Modules](#available-modules)
+  - [Cmdlets / functions](#cmdlets--functions)
+  - [Variables](#variables-1)
+  - [Finding the right command](#finding-the-right-command)
+  - [Keyboard Shortcuts](#keyboard-shortcuts)
+  - [PowerShell repo](#powershell-repo)
+  - [Notes](#notes)
+  - [Links](#links)
+  - [Literature](#literature)
 
-PowerShell
-Fabian Sasse, Stefan Zmatlo
 ## Basics
 What is PowerShell?
 
@@ -91,16 +115,27 @@ Modules
 Get-InstalledModule Lists installed Modules (not currently loaded!)
 Get-Module Lists currently loaded modules
 ## Highlights
-Import / Export Objects
-Credential Objects
-Built-in Debugging
-Execution Policies
-Highlights
-Out-GridView
-Splatting
-Foreach –Parallel
-PowerShell Remoting
-Logging / Auditing
+- Import / Export Objects\
+All object in PowerShell can be exported and imported again in a deserialzied state
+
+- Credential Objects\
+PowerShell provides credential objects for securely handle secrets
+
+- Built-in Debugging\
+There is full debugging(e.g. breakpoint, stepping through) available in PowerShell
+
+- Execution Policies\
+Prevention of accidental execution
+
+- Out-GridView
+- Splatting\
+Parameter can be passed a hashtable improving readabilty in scripts (don't use ``` ` ``` !)
+- Foreach –Parallel\
+Since PowerShell 7 parallel execution of piped inputs can be performed, racecondtion aware datatypes are available as well
+- PowerShell Remoting\
+Execute commands on remote host interactivly or unattended
+- Logging / Auditing\
+PowerShell provides logging and auditing features out of the box
 ## Features from other Shells
 History / Search
 Profile
@@ -138,12 +173,13 @@ DEMO TIME
 
 [about Automatic Variables - PowerShell | Microsoft Docs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_automatic_variables?view=powershell-7.2)
 ## Finding the right command
-Get-Command aka gcm
-Get-Members aka gm
-Get-help aka help
-Show-Command
+- ```Get-Command``` aka ```gcm```
+- ```Get-Members``` aka ```gm```
+- ```Get-help aka ```help```
+- ```Show-Command```
+
 ## Keyboard Shortcuts
-Autocomplete with CTRL + SPACE
+Autocomplete with ```CTRL``` + ```SPACE```
 Works on Cmdlets and parameters
 ## PowerShell repo
 https://bitbucket.vbc.ac.at/projects/VBCOPS/repos/scriptsandsnippets/browse
