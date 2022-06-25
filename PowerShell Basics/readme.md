@@ -71,6 +71,10 @@ Built-In Aliases
 |```?```|```Where-Object```
 |```$_```|```$PSITEM```
 
+
+[![asciicast](https://asciinema.org/a/NnF8Ibw1rRYfBZGfbUb358f8L.svg)](https://asciinema.org/a/NnF8Ibw1rRYfBZGfbUb358f8L)
+
+
 [about Aliases - PowerShell | Microsoft Docs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_aliases?view=powershell-7.1)
 ## Variables
 DEMO TIME
