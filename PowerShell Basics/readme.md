@@ -49,16 +49,13 @@ First time Multiplatform
 ## First Steps
 First Steps
 ## Basic Concepts
-```Verb-Noun``` Cmdlets
-Case insensitive
-Basic Concepts
-Object based
-
-
-Basic Concepts
-Autotype Casting
-Basic Concepts
-.NET Based
+- ```Verb-Noun``` Cmdlets
+- Case insensitive
+- Basic Concepts
+- Object based
+- Autotype Casting
+- Basic Concepts
+- .NET Based
 ## Aliases
 Common Unix / dos commands built-in
 |Alias|Cmdlet|
@@ -136,6 +133,22 @@ Prevention of accidental execution
 Parameter can be passed a hashtable improving readabilty in scripts (don't use ``` ` ``` !)
 - Foreach –Parallel\
 Since PowerShell 7 parallel execution of piped inputs can be performed, racecondtion aware datatypes are available as well
+```mermaid
+stateDiagram-v2
+    Cmdlet --> Pipeline
+    Pipeline: Foreach -Parallel
+    state Pipeline {
+        Runspace1 --> Scriptblock1
+        Scriptblock1 --> [*]
+        --
+        Runspace2 --> Scriptblock2
+        Scriptblock2 --> [*]
+        --
+        Runspace3 --> Scriptblock3
+        Scriptblock3 --> [*]
+    }
+    Pipeline --> Result
+```
 - PowerShell Remoting\
 Execute commands on remote host interactivly or unattended
 - Logging / Auditing\
